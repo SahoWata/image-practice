@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+body{
+    font-size: 12px;
+    font-weight: 400;
+}
+h1{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+header{
+    position: relative; /*基準位置*/
+    margin-bottom: 10px;
+}
+
+.header-text{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: 2; /*画像装飾*/
+}
+
+.header-pattern{
+    position: absolute;
+    z-index: 1;
+    background-size: auto auto;
+    background-image: repeating-linear-gradient(0deg,transparent,transparent 2px, rgba(255, 0, 0, .3) 2px, rgba(255, 0, 0, .3) 4px);
+}
+
+header img{
+    object-fit: cover; /*サイズからはみ出した分をトリミング*/
+    object-position: center top;
+    width: 100vw;
+    height: 90vh;
+}
+
+.header-text,
+.header-pattern,
+header img{
+    width: 100vw;
+    height: 90vh;
+}
